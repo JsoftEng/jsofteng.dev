@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JsoftEng Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <main class="layout">
+      <div id="header" class="header">
+        <nav id="navbar" class="nav-container">
+          <a href="#welcome-section-anchor" class="nav-link">Home</a>
+          <a href="#projects-section-anchor" class="nav-link">Projects</a>
+          <a href="#footer-anchor" class="nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="section-container">
+        <a id="welcome-section-anchor" class="anchor"></a>
+        <section class="section welcome-section" 
+                 id="welcome-section">
+          <div id="avatar-border" class="avatar-border"></div>
+          <h1 id="welcome-text" class="welcome-text">
+            Hello, I'm John!<span class="blinking-cursor">_</span>
+          </h1>
+        </section>
+        <a id="projects-section-anchor" class="anchor"></a>
+        <section class="section projects-section" 
+                 id="projects">
+          <h2 id="projects-section-header"
+              class="projects-section-header">Projects</h2>
+          <hr/>
+          <div class="projects-container">
+            <a 
+               id="landing-page-project-link" 
+               class="project-link" 
+               href="https://codepen.io/JSoftEng/full/RwWoKqq">
+              <div id="landing-page-project" class="project-tile">
+                <img id="project-img" class="project-img"></img>
+                <div class="project-title" id="project-img"></div>
+              </div>
+            </a>
+            <a id="survey-form-project-link" 
+               class="project-link" 
+               href="https://codepen.io/JSoftEng/full/RwWoKqq">
+              <div id="survey-form-project" class="project-tile">
+                <img id="survey-form-project-img" class="project-img"></img>
+                <div id="survey-form-project-img" class="project-title"></div>
+              </div>
+            </a>
+            <a id="technical-documentation-project-link" 
+               class="project-link" 
+               href="https://codepen.io/JSoftEng/full/RwWoKqq">
+              <div id="technical-documentation-project" class="project-tile">
+                <img id="technical-documentation-project-img" class="project-img"></img>
+                <div id="technical-documentation-project-img" class="project-title"></div>
+              </div>
+            </a>
+          </div>
+          <hr/>
+        </section>
+      </div>
+      <a id="footer-anchor" class="anchor"></a>
+      <footer id="footer" class="footer">
+        <a 
+           id="twitter" 
+           class="footer-link"
+           href="https://twitter.com/jsofteng"
+           target="_blank">Twitter</a>
+        <a 
+           id="linkedin" 
+           class="footer-link"
+           href="https://www.linkedin.com/in/jsofteng/"
+           target="_blank">Linkedin</a>
+        <a 
+           id="github" 
+           class="footer-link"
+           href="https://github.com/JsoftEng"
+           target="_blank">Github</a>
+        <a 
+           id="profile-link" 
+           class="footer-link"
+           href="https://www.freecodecamp.org/jsofteng"
+           target="_blank">FreeCodeCamp</a>
+      </footer>
+    </main>
+  </body>
+</html>
