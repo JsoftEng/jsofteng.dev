@@ -38,7 +38,7 @@ hr {
   position: fixed;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   background-color: rgb(45, 45, 45);
   box-shadow: 0px 1px 25px 5px rgba(0, 0, 0, 0.35)
