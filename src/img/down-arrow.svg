@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="136" height="113" viewBox="0 0 136 113">
+  <defs>
+    <filter id="Down_Arrow" x="0" y="0" width="136" height="113" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Down_Arrow)">
+    <path id="Down_Arrow-2" data-name="Down Arrow" d="M50.5,13.678a10,10,0,0,1,16.99,0l41.018,66.046A10,10,0,0,1,100.018,95H17.982a10,10,0,0,1-8.5-15.276Z" transform="translate(127 101) rotate(180)" fill="#707070"/>
+  </g>
+</svg>

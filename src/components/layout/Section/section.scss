@@ -1,0 +1,62 @@
+.section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.home-section {
+  @extend .section;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section {
+  min-height: 1000px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-section {
+  min-height: 1000px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section {
+  min-height: 1000px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  height: 360px;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -6px 6px 16px #dbdbdb, 6px -6px 16px #ffffff;
+  border-radius: 25px;
+  font-size: 6em;
+  margin: 0px 0px 25px 0px;
+  transition: width 0.5s, height 0.5s, font-size 0.5s;
+}
+
+/* Media Queries */
+@media (max-width: 950px) {
+  
+}
+
+@media (max-width: 680px) {
+  .avatar {
+    height: 275px;
+    width: 275px;
+    box-shadow: -6px 6px 16px #dbdbdb, 6px -6px 16px #ffffff;
+    font-size: 4em;
+    margin: 0px 0px 25px 0px;
+    transition: width 0.5s, height 0.5s, font-size 0.5s;
+  }
+}
