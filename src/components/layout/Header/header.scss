@@ -27,6 +27,11 @@
   width: 50%;
   min-width: 200px;
   height: 10%;
+
+  a {
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 .header-nav-container {
