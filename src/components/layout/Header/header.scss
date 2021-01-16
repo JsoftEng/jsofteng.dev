@@ -38,6 +38,11 @@
 
 .header-social-icon {
   cursor: pointer;
+  fill: #707070;
+
+  &:hover {
+    fill: #9f9f9f;
+  }
 }
 
 nav[class='header-nav'] {

@@ -37,9 +37,9 @@ function Header (props) {
         </nav>
       </div>
       <div className='header-social'>
-        <a href='https://twitter.com/jsofteng' target='_blank' className='header-social-icon' rel='noreferrer'><TwitterIcon /></a>
-        <a href='https://github.com/JsoftEng' target='_blank' className='header-social-icon' rel='noreferrer'><GithubIcon /></a>
-        <a href='https://linkedin.com/in/jsofteng/' target='_blank' className='header-social-icon' rel='noreferrer'><LinkedInIcon /></a>
+        <a href='https://twitter.com/jsofteng' target='_blank' rel='noreferrer'><TwitterIcon className='header-social-icon'/></a>
+        <a href='https://github.com/JsoftEng' target='_blank' rel='noreferrer'><GithubIcon className='header-social-icon'/></a>
+        <a href='https://linkedin.com/in/jsofteng/' target='_blank' rel='noreferrer'><LinkedInIcon className='header-social-icon'/></a>
       </div>
     </div>
   )
