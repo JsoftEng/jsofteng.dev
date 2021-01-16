@@ -63,6 +63,12 @@ nav[class='header-nav'] {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    a {
+      color: #707070;
+      outline: none;
+      text-decoration: none;
+    }
   }
 }
 

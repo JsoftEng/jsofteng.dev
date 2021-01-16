@@ -9,6 +9,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  a {
+    outline: none;
+    text-decoration: none;
+  }
+
+  .down-arrow {
+    animation: down-arrow-float 4s ease-in-out infinite;
+  }
+
+  @keyframes down-arrow-float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(10px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
 }
 
 .about-section {

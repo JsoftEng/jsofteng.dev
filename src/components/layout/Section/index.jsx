@@ -17,7 +17,7 @@ function Section (props) {
         <div className='avatar'>
           <h1>J</h1>
         </div>
-        <DownArrow />
+        <a href='#about'><DownArrow className='down-arrow'/></a>
       </>
       break
     case 'About':
@@ -40,7 +40,7 @@ function Section (props) {
   }
 
   return (
-    <div className={sectionClass}>
+    <div id={sectionID} className={sectionClass}>
       {content}
     </div>
   )

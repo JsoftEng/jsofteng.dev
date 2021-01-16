@@ -12,26 +12,26 @@ function Header (props) {
       <div className='header-nav-container'>
         <div className='header-scroll'>
           <div className='header-scrollbar-outer'>
-            <div className='header-scrollbar-inner'/>
+            <div id='header-scrollbar-inner' className='header-scrollbar-inner'/>
           </div>
         </div>
         <nav className='header-nav'>
           <ul>
             <li>
-              <Indicator className='header-indicator' isActive='true' />
-              <h2 className='header-label'>Home</h2>
+              <a href='#home'><Indicator className='header-indicator' isActive='true' /></a>
+              <a href='#home'><h2 className='header-label'>Home</h2></a>
             </li>
             <li>
-              <Indicator className='header-indicator' isActive='false' />
-              <h2 className='header-label'>About</h2>
+              <a href='#about'><Indicator className='header-indicator' isActive='false' /></a>
+              <a href='#about'><h2 className='header-label'>About</h2></a>
             </li>
             <li>
-              <Indicator className='header-indicator' isActive='false' />
-              <h2 className='header-label'>Projects</h2>
+              <a href='#projects'><Indicator className='header-indicator' isActive='false' /></a>
+              <a href='#projects'><h2 className='header-label'>Projects</h2></a>
             </li>
             <li>
-              <Indicator className='header-indicator' isActive='false' />
-              <h2 className='header-label'>Contact</h2>
+              <a href='#contact'><Indicator className='header-indicator' isActive='false' /></a>
+              <a href='#contact'><h2 className='header-label'>Contact</h2></a>
             </li>
           </ul>
         </nav>
