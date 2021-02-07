@@ -58,7 +58,7 @@ function Section (props) {
   }
 
   return (
-    <div id={sectionID} className={sectionClass} onWheel={props.wheelOver}>
+    <div id={sectionID} className={sectionClass} onWheel={props.wheelOver} onTouchStart={props.wheelOver}>
       {content}
     </div>
   )
