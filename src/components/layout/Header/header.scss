@@ -40,21 +40,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 50%;
+  justify-content: center;
+  width: 100%;
   height: 90%;
 
   nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     height: 100%;
   
     ul {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 100%;
       height: 100%;
       margin: 0px;
       padding: 0px;
@@ -86,30 +86,6 @@
     padding: 0px 5px 0px 0px;
     cursor: pointer;
   }
-
-  .header-scroll {
-    display: flex;
-    align-items: center;
-    width: 70px;
-    height: 100%;
-  
-    .header-scrollbar-outer {
-      display: flex;
-      justify-content: center;
-      height: 60%;
-      width: 9px;
-      background-color: white;
-      border-radius: 20px;
-      padding: 4px 0px 0px 0px;
-    
-      .header-scrollbar-inner {
-        height: 20%;
-        width: 7px;
-        background-color: #707070;
-        border-radius: 20px;
-      }
-    }
-  }
 }
 
 .header-icon-container {
@@ -117,7 +93,8 @@
   width: 100%;
   height: 70px;
   align-items: center;
-  padding-left: 25px;
+  padding: 25px 0px 0px 25px;
+  box-sizing: border-box;
 
   a {
     text-decoration: none;
@@ -143,14 +120,14 @@
 @media (max-width: 950px) {
   .header-container {
     align-items: center;
-    height: 200px;
+    height: 150px;
     width: 100%;
     margin: 0px 0px 25px 0px;
   }
 
   .header-social {
     width: 25%;
-    height: 50px;
+    height: 40px;
   }
 
   .header-nav-container {
@@ -158,7 +135,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 40px;
 
     nav {
       height: 50px;
@@ -170,33 +147,6 @@
     
       li {
         padding: 0px 15px;
-      }
-    }
-
-    .header-scroll {
-      justify-content: center;
-      width: 100%;
-      height: 15px;
-      padding: 25px 0px 5px 0px;
-      box-sizing: border-box;
-  
-      .header-scrollbar-outer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 5px;
-        min-width: 300px;
-        width: 70%;
-        background-color: white;
-        border-radius: 20px;
-        padding: 0px 0px 0px 4px;
-    
-        .header-scrollbar-inner {
-          height: 3px;
-          width: 20%;
-          background-color: #707070;
-          border-radius: 20px;
-        }
       }
     }
   }

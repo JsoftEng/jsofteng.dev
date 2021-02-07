@@ -130,11 +130,6 @@ function Header (props) {
         </a>
       </div>
       <div className='header-nav-container'>
-        <div className='header-scroll'>
-          <div className='header-scrollbar-outer'>
-            <div id='header-scrollbar-inner' className='header-scrollbar-inner'/>
-          </div>
-        </div>
         <nav className='header-nav'>
           <ul>
             <li>
