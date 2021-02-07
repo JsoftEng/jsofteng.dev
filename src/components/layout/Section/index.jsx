@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DownArrow from '../../../img/down-arrow.svg'
+import portrait from '../../../img/portrait.png'
 
 import './section.scss'
 
@@ -17,13 +18,30 @@ function Section (props) {
         <div className='avatar'>
           <h1>J</h1>
         </div>
-        <a href='#about'><DownArrow className='down-arrow'/></a>
+        <a id='down-arrow' href='#about'><DownArrow className='down-arrow'/></a>
       </>
       break
     case 'About':
       sectionClass = 'about-section'
       sectionID = 'about'
-      content = <></>
+      content = <>
+        <div className='portrait'>
+          <img src={ portrait }></img>
+        </div>
+        <div className='about-section-text'>
+          <h2>Who Am I?</h2>
+          <hr/>
+          <p>
+            Hi, I&apos;m John, a full-stack software engineer with a passion for front-end development.
+            I&apos;ve been a professional software developer for a little over 4 years now. In that time I&apos;ve had the luxury
+            of being exposed to a number of tech stacks ranging from ASP.Net/Angular to React on Rails. I&apos;m no stranger to agility!
+          </p>
+          <p>
+            When I&apos;m not knee deep in code I&apos;m usually spending time with my dog Kaiser, gaming, watching anime or on some wild
+            adventure with a couple of friends.
+          </p>
+        </div>
+      </>
       break
     case 'Projects':
       sectionClass = 'projects-section'
@@ -40,14 +58,15 @@ function Section (props) {
   }
 
   return (
-    <div id={sectionID} className={sectionClass}>
+    <div id={sectionID} className={sectionClass} onWheel={props.wheelOver}>
       {content}
     </div>
   )
 }
 
 Section.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
+  wheelOver: PropTypes.func
 }
 
 export default Section

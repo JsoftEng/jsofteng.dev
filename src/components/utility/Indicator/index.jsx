@@ -3,7 +3,7 @@ import ActiveIndicator from '../../../img/icons/indicator-active.svg'
 import InactiveIndicator from '../../../img/icons/indicator-inactive.svg'
 
 function Indicator (props) {
-  const [active, setActive] = useState(props.isActive)
+  const active = props.isActive
   let content = null
 
   switch (active) {
