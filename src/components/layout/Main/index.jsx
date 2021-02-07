@@ -5,9 +5,9 @@ import './main.scss'
 
 function Main (props) {
   return (
-    <div id="main" className="main">
+    <main id="main" className="main">
       { props.children }
-    </div>
+    </main>
   )
 }
 

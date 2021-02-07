@@ -122,6 +122,13 @@ function Header (props) {
 
   return (
     <div className='header-container'>
+      <div className='header-icon-container'>
+        <a href='/'>
+          <div className='header-icon'>
+            <h1>J</h1>
+          </div>
+        </a>
+      </div>
       <div className='header-nav-container'>
         <div className='header-scroll'>
           <div className='header-scrollbar-outer'>
