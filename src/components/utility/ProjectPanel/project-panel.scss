@@ -1,0 +1,125 @@
+.project-panel {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  min-height: 500px;
+  font-family: 'Roboto Condensed';
+
+  .project-panel-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .project-thumbnail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      width: 835px;
+      box-shadow: -2px 2px 7px #dbdbdb, 2px -2px 7px #ffffff;
+      border-radius: 10px;
+      margin: 0px 15px 0px 0px;
+      transition: width 0.5s, height 0.5s, font-size 0.5s;
+    }
+
+    h2 {
+      margin: 10px 0px 0px 0px;
+      font-weight: normal;
+    }
+
+    img {
+      height: 95%;
+      width: 95%;
+      border-radius: 10px;
+    }
+  }
+
+  .project-panel-info {
+    display: flex;
+    flex-direction: column;
+
+    .project-tech-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 100px;
+
+      .project-tech {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -2px 2px 3px #dbdbdb, 2px -2px 3px #ffffff;
+        border-radius: 5px;
+        color: #707070;
+        outline: none;
+        text-decoration: none;
+        height: 25px;
+        min-width: 100px;
+        margin: 0px 5px;
+        &:hover {
+          background-color: #F7F7F7;
+        }
+
+        h2 {
+          font-size: 0.9em;
+          font-weight: normal;
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1600px) {
+  .project-panel {
+    flex-direction: column;
+    align-items: center;
+
+    .project-panel-info {
+      width: 80%;
+
+      .project-description {
+        text-align: center;
+      }
+
+      .project-tech-container {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .project-panel {
+    .project-panel-main {
+      .project-thumbnail {
+        height: 300px;
+        width: 626px;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .project-panel {
+    .project-panel-main {
+      .project-thumbnail {
+        height: 200px;
+        width: 417px;
+      }
+    }
+  }
+}
+
+@media (max-width: 465px) {
+  .project-panel {
+    .project-panel-main {
+      .project-thumbnail {
+        height: 150px;
+        width: 313px;
+      }
+    }
+  }
+}
