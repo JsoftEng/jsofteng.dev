@@ -3,6 +3,7 @@ import Main from './layout/Main'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
 import Section from './layout/Section'
+import SectionHeader from './utility/SectionHeader'
 
 import '../styles/app.scss'
 
@@ -62,8 +63,11 @@ function App () {
       <Header headerState={headerState}/>
       <Main>
         <Section name='Home' wheelOver={handleSectionWheelOver}/>
+        <SectionHeader id='about-section-header' name='About' orientation='left'/>
         <Section name='About' wheelOver={handleSectionWheelOver}/>
+        <SectionHeader id='projects-section-header' name='Projects' orientation='right'/>
         <Section name='Projects' wheelOver={handleSectionWheelOver}/>
+        <SectionHeader id='contact-section-header' name='Contact' orientation='left'/>
         <Section name='Contact' wheelOver={handleSectionWheelOver}/>
       </Main>
     </>

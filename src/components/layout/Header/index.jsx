@@ -141,26 +141,26 @@ function Header (props) {
               </a>
             </li>
             <li>
-              <a id='about-header-indicator' href='#about' onClick={handleIndicatorClick}>
+              <a id='about-header-indicator' href='#about-section-header' onClick={handleIndicatorClick}>
                 <Indicator className='header-indicator' isActive={indicatorState.aboutIndicator}/>
               </a>
-              <a id='about-header-label' href='#about' onClick={handleLabelClick}>
+              <a id='about-header-label' href='#about-section-header' onClick={handleLabelClick}>
                 <h2 className='header-label'>About</h2>
               </a>
             </li>
             <li>
-              <a id='projects-header-indicator' href='#projects' onClick={handleIndicatorClick}>
+              <a id='projects-header-indicator' href='#projects-section-header' onClick={handleIndicatorClick}>
                 <Indicator className='header-indicator' isActive={indicatorState.projectsIndicator}/>
               </a>
-              <a id='projects-header-label' href='#projects' onClick={handleLabelClick}>
+              <a id='projects-header-label' href='#projects-section-header' onClick={handleLabelClick}>
                 <h2 className='header-label'>Projects</h2>
               </a>
             </li>
             <li>
-              <a id='contact-header-indicator' href='#contact' onClick={handleIndicatorClick}>
+              <a id='contact-header-indicator' href='#contact-section-header' onClick={handleIndicatorClick}>
                 <Indicator className='header-indicator' isActive={indicatorState.contactIndicator}/>
               </a>
-              <a id='contact-header-label' href='#contact' onClick={handleLabelClick}>
+              <a id='contact-header-label' href='#contact-section-header' onClick={handleLabelClick}>
                 <h2 className='header-label'>Contact</h2>
               </a>
             </li>

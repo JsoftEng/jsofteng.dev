@@ -20,7 +20,7 @@ function Section (props) {
           <div className='avatar'>
             <h1>J</h1>
           </div>
-          <a id='down-arrow' href='#about'><DownArrow className='down-arrow'/></a>
+          <a id='down-arrow' href='#about-section-header'><DownArrow className='down-arrow'/></a>
         </>
       break
     case 'About':
