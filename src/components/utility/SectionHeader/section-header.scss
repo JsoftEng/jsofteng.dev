@@ -7,13 +7,19 @@
 
 .section-header-label {
   position: absolute;
+  z-index: 0;
   background-color: #F9F9F9;
-  box-shadow: -2px 2px 3px #3c3b3b, 2px -2px 3px #b5afaf;
+  box-shadow: -2px 2px 3px #dbdbdb,2px -2px 3px #ffffff;
   border-radius: 5px;
   padding: 5px;
+  color: #707070;
+  font-size: 1.5em;
 }
 
 .section-heading-container {
+  position: relative;
+  z-index: -1;
+  filter: drop-shadow(-3px 3px 2px #dbdbdb) drop-shadow(3px -3px 2px #ffffff);
   padding: 5px 0px;
 }
 
