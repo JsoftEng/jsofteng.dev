@@ -1,5 +1,5 @@
 import React from 'react'
-import PortfolioThumbnail from '../../../img/project-thumbnails/portfolio-thumbnail.png'
+import PortfolioThumbnail from '../../../img/project-thumbnails/portfolio-thumbnail.webp'
 
 import './project-panel.scss'
 

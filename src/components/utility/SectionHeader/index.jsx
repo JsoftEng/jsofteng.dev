@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import SectionHeadingContainerLeft from '../../../img/section-heading-container-left.png'
-import SectionHeadingContainerRight from '../../../img/section-heading-container-right.png'
+import SectionHeadingArrowLeft from '../../../img/section-heading-arrow-left.png'
+import SectionHeadingArrowRight from '../../../img/section-heading-arrow-right.png'
 
 import './section-header.scss'
 
@@ -14,7 +14,7 @@ function SectionHeader (props) {
         <>
           <div id='section-header-align-right' className='section-header-align-right'>
             <h1 className='section-header-label'>{props.name.toUpperCase()}</h1>
-            <img src={SectionHeadingContainerRight} id={props.id} className='section-heading-container'></img>
+            <img src={SectionHeadingArrowRight} id={props.id} className='section-heading-arrow'></img>
           </div>
         </>
       break
@@ -23,7 +23,7 @@ function SectionHeader (props) {
         <>
           <div id='section-header-align-left' className='section-header-align-left'>
             <h1 className='section-header-label'>{props.name.toUpperCase()}</h1>
-            <img src={SectionHeadingContainerLeft} id={props.id} className='section-heading-container'></img>
+            <img src={SectionHeadingArrowLeft} id={props.id} className='section-heading-arrow'></img>
           </div>
         </>
       break

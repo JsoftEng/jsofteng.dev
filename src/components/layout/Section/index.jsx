@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DownArrow from '../../../img/down-arrow.svg'
-import portrait from '../../../img/portrait.png'
+import portrait from '../../../img/portrait.webp'
 import ProjectPanel from '../../utility/ProjectPanel'
 
 import './section.scss'

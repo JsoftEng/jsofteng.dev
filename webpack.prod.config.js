@@ -24,7 +24,7 @@ module.exports = {
         use: ['@svgr/webpack']
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|webp)$/i,
         exclude: /node_modules/,
         use: [
           {
