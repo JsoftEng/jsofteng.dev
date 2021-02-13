@@ -12,6 +12,7 @@ function Section (props) {
   let sectionID = null
   let content = null
   let validate = null
+  let encode = null
 
   switch (props.name) {
     case 'Home':
@@ -78,6 +79,11 @@ function Section (props) {
 
         return errors
       }
+      encode = (data) => {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+          .join('&')
+      }
       content =
         <>
           <Formik
@@ -88,12 +94,20 @@ function Section (props) {
             }}
             validate={validate}
             onSubmit= {(values, { setSubmitting }) => {
+              fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: encode({ 'form-name': 'contact-form', ...values })
+              })
+                .then(() => alert('Success!'))
+                .catch(error => alert(error))
+
               setTimeout(() => {
                 setSubmitting(false)
               }, 400)
             }}
           >
-            <Form name='contact-form' className='contact-form' method='post' data-netlify='true' data-netlify-honeypot='bot-field'>
+            <Form name='contact-form' className='contact-form' method='post'>
               <input type='hidden' name='form-name' value='contact-form' />
               <div id='form-name-container' className='form-name-container'>
                 <label htmlFor='name'>Name</label>
