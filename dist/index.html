@@ -18,7 +18,14 @@
     <meta name="description" content="Portfolio Website" />
   </head>
   <body style="margin: 0px">
-    <div id="app"></div>
+    <div id="app">
+      <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="messsage" />
+        <textarea name="message"></textarea>
+      </form>
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>
