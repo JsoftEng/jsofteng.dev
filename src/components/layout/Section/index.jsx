@@ -93,8 +93,8 @@ function Section (props) {
               }, 400)
             }}
           >
-            <Form name='contact-form' className='contact-form' method='post'>
-              <input type="hidden" name="form-name" value="contact-form" />
+            <Form name='contact-form' className='contact-form' method='post' data-netlify='true' data-netlify-honeypot='bot-field'>
+              <input type='hidden' name='form-name' value='contact-form' />
               <div id='form-name-container' className='form-name-container'>
                 <label htmlFor='name'>Name</label>
                 <Field name='name' type='text'/>
