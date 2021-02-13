@@ -23,9 +23,16 @@
     align-items: center;
     box-shadow: -6px 6px 16px #dbdbdb, 6px -6px 16px #ffffff;
     border-radius: 25px;
-    font-size: 6em;
     margin: 0px 0px 25px 0px;
-    transition: width 0.5s, height 0.5s, font-size 0.5s;
+    transition: width 0.5s, height 0.5s;
+    
+
+    h1 {
+      margin: 0px;
+      font-size: 15em;
+      font-weight: 900;
+      transition: font-size 0.5s;
+    }
   }
 
   .down-arrow {
@@ -82,7 +89,7 @@
 
     p {
       font-size: 1.5em;
-      font-family: 'Roboto Condensed';
+      font-family: 'Roboto Condensed', sans-serif;
       margin: 0px;
       padding: 10px 0px;
     }
@@ -106,6 +113,97 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 730px;
+    height: 100%;
+
+    %form-control {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      margin: 25px 0px;
+
+      .form-error {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        padding: 5px 0px 0px 5px;
+        color: #f00;
+      }
+
+      label {
+        text-align: left;
+        font-size: 1.5em;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+      }
+
+      input {
+        height: 35px;
+        border: 1px solid #dfdfdf;
+        border-radius: 5px;
+        padding: 0px 5px;
+        outline: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        box-shadow:none;
+
+        &:focus{
+          outline: none;
+          border-color: #ccc;
+        }
+      }
+    }
+
+    .form-name-container {
+      @extend %form-control;
+    }
+
+    .form-email-container {
+      @extend %form-control;
+    }
+
+    .form-message-container {
+      @extend %form-control;
+      
+
+      textarea {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        resize: vertical;
+        min-height: 200px;
+        max-height: 500px;
+        border: 1px solid #dfdfdf;
+        border-radius: 5px;
+        padding: 5px 5px 0px 5px;
+        outline: none;
+
+        &:focus{
+          border-color: #ccc;
+        }
+      }
+    }
+
+    .form-submit {
+      font-size: 2em;
+      font-weight: 500;
+      font-family: 'Roboto', sans-serif;
+      color: #707070;
+      background-color: #f9f9f9;
+      box-shadow: -2px 2px 4px #dbdbdb, 2px -2px 4px #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
 }
 
 /* Media Queries */
@@ -163,9 +261,13 @@
       height: 275px;
       width: 275px;
       box-shadow: -6px 6px 16px #dbdbdb, 6px -6px 16px #ffffff;
-      font-size: 4em;
       margin: 0px 0px 25px 0px;
-      transition: width 0.5s, height 0.5s, font-size 0.5s;
+      transition: width 0.5s, height 0.5s;
+
+      h1 {
+        font-size: 13em;
+        transition: font-size 0.5s;
+      }
     }
   }
 
