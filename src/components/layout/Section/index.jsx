@@ -4,6 +4,7 @@ import DownArrow from '../../../img/down-arrow.svg'
 import portrait from '../../../img/portrait.webp'
 import ProjectPanel from '../../utility/ProjectPanel'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { useToasts } from 'react-toast-notifications'
 
 import './section.scss'
 
@@ -13,6 +14,8 @@ function Section (props) {
   let content = null
   let validate = null
   let encode = null
+
+  const { addToast } = useToasts()
 
   switch (props.name) {
     case 'Home':
@@ -80,10 +83,12 @@ function Section (props) {
         return errors
       }
       encode = (data) => {
+        debugger
         return Object.keys(data)
           .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
           .join('&')
       }
+
       content =
         <>
           <Formik
@@ -99,8 +104,8 @@ function Section (props) {
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: encode({ 'form-name': 'contact-form', ...values })
               })
-                .then(() => alert('Success!'))
-                .catch(error => alert(error))
+                .then(() => addToast('Message Sent!', { appearance: 'success' }))
+                .catch(() => addToast('Oops, something went wrong!', { appearance: 'error' }))
 
               setTimeout(() => {
                 setSubmitting(false)

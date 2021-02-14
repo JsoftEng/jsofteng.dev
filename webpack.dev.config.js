@@ -1,4 +1,5 @@
 const path = require('path')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   mode: 'development',
@@ -12,6 +13,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ],
   devServer: {
     overlay: true,
     publicPath: '/',
