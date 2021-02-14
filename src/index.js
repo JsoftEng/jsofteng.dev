@@ -8,7 +8,7 @@ render(
     autoDismiss
     autoDismissTimeout={3000}
     transitionDuration={440}
-    placement='bottom-center'
+    placement='top-right'
   >
     <App/>
   </ToastProvider>,
