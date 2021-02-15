@@ -49,6 +49,11 @@ function ProjectPanel (props) {
           id: '6',
           name: 'Webpack',
           url: 'https://webpack.js.org/'
+        },
+        {
+          id: '7',
+          name: 'Netlify',
+          url: 'https://www.netlify.com/'
         }
       ]
       break
