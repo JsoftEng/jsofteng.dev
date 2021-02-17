@@ -15,6 +15,7 @@ function App () {
     contactIndicator: 'false'
   }
   const [headerState, setHeaderState] = useState(initialHeaderState)
+  const [theme, setTheme] = useState('light')
 
   const handleSectionWheelOver = (e) => {
     const sectionType = e.currentTarget.id
@@ -58,18 +59,26 @@ function App () {
     setHeaderState(newHeaderState)
   }
 
+  const toggleTheme = (e) => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+
+    setTheme(newTheme)
+  }
+
   return (
     <>
-      <Header headerState={headerState}/>
-      <Main>
-        <Section name='Home' wheelOver={handleSectionWheelOver}/>
-        <SectionHeader id='about-section-header' name='About' orientation='left'/>
-        <Section name='About' wheelOver={handleSectionWheelOver}/>
-        <SectionHeader id='projects-section-header' name='Projects' orientation='right'/>
-        <Section name='Projects' wheelOver={handleSectionWheelOver}/>
-        <SectionHeader id='contact-section-header' name='Contact' orientation='left'/>
-        <Section name='Contact' wheelOver={handleSectionWheelOver}/>
-      </Main>
+      <div id='content' className={`content ${theme}`} >
+        <Header headerState={headerState} toggleTheme={toggleTheme}/>
+        <Main theme={theme}>
+          <Section name='Home' wheelOver={handleSectionWheelOver}/>
+          <SectionHeader id='about-section-header' name='About' orientation='left' theme={theme}/>
+          <Section name='About' wheelOver={handleSectionWheelOver}/>
+          <SectionHeader id='projects-section-header' name='Projects' orientation='right' theme={theme}/>
+          <Section name='Projects' wheelOver={handleSectionWheelOver}/>
+          <SectionHeader id='contact-section-header' name='Contact' orientation='left' theme={theme}/>
+          <Section name='Contact' wheelOver={handleSectionWheelOver}/>
+        </Main>
+      </div>
     </>
   )
 }

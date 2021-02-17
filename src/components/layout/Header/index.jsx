@@ -4,8 +4,7 @@ import TwitterIcon from '../../../img/icons/twitter.svg'
 import GithubIcon from '../../../img/icons/github.svg'
 import LinkedInIcon from '../../../img/icons/linkedin.svg'
 import Indicator from '../../utility/Indicator'
-
-import './header.scss'
+import Toggle from 'react-toggle'
 
 function Header (props) {
   const initialIndicatorState = props.headerState
@@ -122,12 +121,13 @@ function Header (props) {
 
   return (
     <div className='header-container'>
-      <div className='header-icon-container'>
+      <div className='header-top-container'>
         <a href='/'>
           <div className='header-icon'>
             <h1>J</h1>
           </div>
         </a>
+        <Toggle defaultChecked={true} onChange={props.toggleTheme} icons={false}/>
       </div>
       <div className='header-nav-container'>
         <nav className='header-nav'>
@@ -177,7 +177,8 @@ function Header (props) {
 }
 
 Header.propTypes = {
-  headerState: PropTypes.object
+  headerState: PropTypes.object,
+  toggleTheme: PropTypes.func
 }
 
 export default Header

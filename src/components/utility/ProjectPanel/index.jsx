@@ -1,8 +1,6 @@
 import React from 'react'
 import PortfolioThumbnail from '../../../img/project-thumbnails/portfolio-thumbnail.webp'
 
-import './project-panel.scss'
-
 function ProjectPanel (props) {
   let projectURL = null
   let projectTitle = null

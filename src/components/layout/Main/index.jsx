@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import './main.scss'
-
 function Main (props) {
   return (
     <main id="main" className="main">

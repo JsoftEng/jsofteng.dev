@@ -22,7 +22,8 @@
     "formik": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-toast-notifications": "^2.4.3"
+    "react-toast-notifications": "^2.4.3",
+    "react-toggle": "^4.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

@@ -88,10 +88,10 @@
   }
 }
 
-.header-icon-container {
+.header-top-container {
   display: flex;
   width: 100%;
-  height: 70px;
+  height: 120px;
   align-items: center;
   padding: 25px 0px 0px 25px;
   box-sizing: border-box;
@@ -119,7 +119,7 @@
 @media (max-width: 950px) {
   .header-container {
     align-items: center;
-    height: 150px;
+    height: 200px;
     width: 100%;
     margin: 0px 0px 25px 0px;
   }
@@ -150,9 +150,14 @@
     }
   }
 
-  .header-icon-container {
+  .header-top-container {
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 0px;
-    justify-content: center;
+
+    .react-toggle {
+      left: 0;
+    }
   }
 }
 

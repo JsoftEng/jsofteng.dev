@@ -6,8 +6,6 @@ import ProjectPanel from '../../utility/ProjectPanel'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useToasts } from 'react-toast-notifications'
 
-import './section.scss'
-
 function Section (props) {
   let sectionClass = null
   let sectionID = null

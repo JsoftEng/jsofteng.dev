@@ -1,9 +1,10 @@
-body {
-  color: #707070;
-  background-color: #F9F9F9;
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
-}
+// Import component styles
+@use './../components/layout/Header/header';
+@use './../components/layout/Main/main';
+@use './../components/layout/Section/section';
+@use './../components/utility/ProjectPanel/project-panel';
+@use './../components/utility/SectionHeader/section-header';
+@use './react-toggle';
 
 input,
 textarea,
@@ -13,15 +14,122 @@ a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-#app {
+.content {
   display: flex;
   flex-direction: row;
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
+}
+
+.light {
+  color: #707070;
+  background-color: #F9F9F9;
+}
+
+.dark {
+  color: #EEE;
+  background-color: #707070;
+
+  .header-container {
+    background-color: #707070;
+
+    .header-social {
+      .header-social-icon {
+        fill: #EEE;
+
+        &:hover {
+          fill: #CCC;
+        }
+      }
+    }
+  
+    .header-top-container {  
+      a {
+        color: #EEE;
+      }
+    
+      .header-icon {
+        box-shadow: -2px 2px 5px #393939, 2px -2px 5px #a4a4a4;
+      }
+    }
+
+    .header-nav-container {
+      .header-label {
+        color: #EEE;
+      }
+      
+      .header-indicator {
+        circle {
+          stroke: #EEE;
+        }
+      }
+    }
+  }
+
+  .section-header-label {
+    background-color: #707070;
+    box-shadow: -2px 2px 5px #393939,2px -2px 5px #a4a4a4;
+    color: #EEE;
+  }
+
+  .section-heading-arrow {
+    position: relative;
+    z-index: -1;
+    filter: drop-shadow(-3px 3px 5px #393939) drop-shadow(3px -3px 5px #a4a4a4);
+    padding: 15px 0px;
+  }
+
+  .home-section { 
+    .avatar {
+      box-shadow: -6px 6px 16px #393939, 6px -6px 16px #a4a4a4;
+    }
+
+    .down-arrow {
+      path {
+        fill: #EEE;
+      }
+    }
+  }
+
+  .portrait {
+    background-color: #EEE;
+    border-radius: 10px;
+    box-shadow: -4px 4px 10px #393939, 4px -4px 10px #a4a4a4;
+  }
+
+  .project-panel {
+    .project-panel-main {
+      .project-thumbnail {
+        box-shadow: -2px 2px 7px #393939, 2px -2px 7px #8a8a8a;
+      }
+    }
+
+    .project-panel-info {
+      .project-tech-container {
+        .project-tech {
+          box-shadow: -2px 2px 3px #393939, 2px -2px 3px #8a8a8a; 
+          color: #EEE;
+      
+          &:hover {
+            background-color: #888686;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    .form-submit {
+      color: #EEE;
+      background-color: #707070;
+      box-shadow: -2px 2px 4px #393939, 2px -2px 4px #8a8a8a;
+    }
+  }
 }
 
 /* Media Queries */
 @media (max-width: 950px) {
-  #app {
+  .content {
     flex-direction: column;
   }
 }
